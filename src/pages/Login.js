@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { loginAction } from '../redux/actions';
+import loginAction from '../redux/actions';
 
 class Login extends React.Component {
   constructor() {
@@ -44,7 +44,7 @@ class Login extends React.Component {
     if (this.emailDisable() || this.passwordDisable()) {
       return true;
     }
-    return false
+    return false;
   }
 
   linkToWallet = () => {
@@ -101,8 +101,9 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 Login.propTypes = {
+  history: PropTypes.objectOf.isRequired,
   push: PropTypes.func.isRequired,
   emailDispatch: PropTypes.func.isRequired,
-}
+};
 
 export default connect(null, mapDispatchToProps)(Login);

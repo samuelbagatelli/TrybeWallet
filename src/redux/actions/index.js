@@ -1,1 +1,3 @@
-export const loginAction = (email) => ({ type: 'LOGIN_ACTION', email });
+const loginAction = (email) => ({ type: 'LOGIN_ACTION', email });
+
+export default loginAction;
