@@ -16,3 +16,5 @@ export const fetchCurrencies = () => async (dispatch) => {
     dispatch(failCurrency(error));
   }
 };
+
+export const expensesAction = (expenses) => ({ type: 'EXPENSES_ACTION', expenses });
