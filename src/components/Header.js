@@ -18,7 +18,7 @@ class Header extends Component {
           data-testid="total-field"
         >
           Despesas: R$
-          { ` ${INITIAL_EXPANSE}` }
+          { ` ${INITIAL_EXPANSE} ` }
         </p>
         <p
           data-testid="header-currency-field"
