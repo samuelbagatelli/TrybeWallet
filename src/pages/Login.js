@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { loginAction } from '../redux/actions';
 
-class Login extends React.Component {
+class Login extends Component {
   constructor() {
     super();
 
@@ -64,6 +64,7 @@ class Login extends React.Component {
             Email:
             <input
               name="email"
+              id="email"
               type="email"
               data-testid="email-input"
               onChange={ this.handleChange }
@@ -74,6 +75,7 @@ class Login extends React.Component {
             Senha:
             <input
               name="password"
+              id="password"
               type="password"
               data-testid="password-input"
               onChange={ this.handleChange }

@@ -42,7 +42,7 @@ class WalletForm extends Component {
         exchangeRates,
       });
     } catch (error) {
-      throw new Error(error);
+      // throw new Error(error);
     }
   }
 

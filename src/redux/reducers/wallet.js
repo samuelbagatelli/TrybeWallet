@@ -1,11 +1,11 @@
-const INITIAL_STATE = {
+export const INITIAL_STATE = {
   currencies: [],
   expenses: [],
   editor: false,
   idToEdit: 0,
 };
 
-const wallet = (state = INITIAL_STATE, action) => {
+export const wallet = (state = INITIAL_STATE, action) => {
   switch (action.type) {
   case 'REQUEST_CURRENCY':
     return ({
@@ -16,11 +16,6 @@ const wallet = (state = INITIAL_STATE, action) => {
       ...state,
       currencies: [...state.currencies, ...action.currencies],
     });
-  case 'FAILED_CURRENCY_REQUEST':
-    return ({
-      ...state,
-      currencies: action.error,
-    });
   case 'EXPENSES_ACTION':
     return ({
       ...state,
@@ -30,5 +25,3 @@ const wallet = (state = INITIAL_STATE, action) => {
     return state;
   }
 };
-
-export default wallet;

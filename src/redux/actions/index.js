@@ -2,7 +2,6 @@ export const loginAction = (email) => ({ type: 'LOGIN_ACTION', email });
 
 const currencyRequest = () => ({ type: 'REQUEST_CURRENCY' });
 const currencyReceive = (currencies) => ({ type: 'RECEIVE_CURRENCY', currencies });
-const failCurrency = (error) => ({ type: 'FAILED_CURRENCY_REQUEST', error });
 
 export const fetchCurrencies = () => async (dispatch) => {
   dispatch(currencyRequest());
@@ -13,7 +12,7 @@ export const fetchCurrencies = () => async (dispatch) => {
     const currencies = Object.keys(treatedData);
     dispatch(currencyReceive(currencies));
   } catch (error) {
-    dispatch(failCurrency(error));
+    // throw new Error(error);
   }
 };
 
