@@ -17,3 +17,5 @@ export const fetchCurrencies = () => async (dispatch) => {
 };
 
 export const expensesAction = (expenses) => ({ type: 'EXPENSES_ACTION', expenses });
+
+export const deleteExpenseAction = (expenses) => ({ type: 'DELETE_EXPENSE', expenses });

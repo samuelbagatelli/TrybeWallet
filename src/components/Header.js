@@ -12,7 +12,8 @@ class Header extends Component {
       const round = Math.round(mult * 100) / 100;
       expensesValue += round;
     });
-    return expensesValue;
+    const final = expensesValue.toFixed(2);
+    return final;
   }
 
   render() {

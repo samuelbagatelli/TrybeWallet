@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import { expensesAction, fetchCurrencies } from '../redux/actions';
 
 class WalletForm extends Component {
-  constructor() {
-    super();
+  constructor({ expensesState }) {
+    super({ expensesState });
 
     this.state = {
       id: 0,
@@ -148,6 +148,7 @@ class WalletForm extends Component {
 
 const mapStateToProps = (state) => ({
   currenciesState: state.wallet.currencies,
+  expensesState: state.wallet.expenses,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -159,6 +160,7 @@ WalletForm.propTypes = {
   currenciesDispatch: PropTypes.func.isRequired,
   currenciesState: PropTypes.arrayOf.isRequired,
   expensesDispatch: PropTypes.func.isRequired,
+  expensesState: PropTypes.arrayOf.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(WalletForm);
